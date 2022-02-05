@@ -21,9 +21,9 @@ router.get('/users', (req, res) => {
 })
 
 //Leer un solo usuario
-router.get('/user/:id', (req, res) => {
-    const { id } = req.params;
-    mysqlConnection.query('SELECT * FROM users WHERE id = ?',[id], (err, row, fields)=>{
+router.get('/user/:username', (req, res) => {
+    const { username } = req.params;
+    mysqlConnection.query('SELECT * FROM users WHERE username = ?',[username], (err, row, fields)=>{
         if(!err){
             res.json(row)
             res.status(200)
@@ -62,7 +62,6 @@ router.put('/userUpdateUsername/:id', (req, res) => {
             res.json({status: "Username actualizado correctamente"})
             res.status(200)
         }else{
-            console.log(err)
             res.status(400)
         }
     })
@@ -131,11 +130,11 @@ router.get('/getMonto/:username', (req, res) => {
 })
 
 //Actualizar a monto
-router.put('/updateMonto/:id', (req, res) =>{
-    const { id } = req.params;
+router.put('/updateMonto/:username', (req, res) =>{
+    const { username } = req.params;
     const { monto } = req.body;
-    var query = "UPDATE users SET nonto=? WHERE id=?";
-    mysqlConnection.query(query, [monto, id], (err, row, fields)=>{
+    var query = "UPDATE users SET monto=? WHERE username=?";
+    mysqlConnection.query(query, [monto, username], (err, row, fields)=>{
         if(!err){
             res.json({status: "Se sumo dinero al monto."})
             res.status(200)
@@ -169,12 +168,9 @@ router.post('/login', (req, res) => {
             if(password != passwordRequest){
                 res.json({status: "401"})                
             }else{
-                res.json({status: ["200"]})
-                var token = "200" + username + "asdadfef23r2r" + password + "55554dasdef53adFADF74adf";
-                 mysqlConnection.query(query1,[username,token], (err)=>{
+                res.json({status: ["200"]});
                 console.log(err);
-            })
-            }
+            };
         }else{
             res.json({status: ["404"]})
         }

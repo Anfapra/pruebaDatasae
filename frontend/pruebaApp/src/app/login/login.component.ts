@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   }
   
   login(){
-    var resUsername = this.username.nativeElement.value;
+    var resUsername = (this.username.nativeElement.value).toLowerCase();
     var resPassword = this.password.nativeElement.value;
     localStorage.setItem("user", resUsername)
     axios.post("http://localhost:3000/login",{
@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
   };
 
   registro(){
-    var resUsername = this.usernameRegistro.nativeElement.value;
+    var resUsername = (this.usernameRegistro.nativeElement.value).toLowerCase();
     var resPassword = this.passwordRegistro.nativeElement.value;
     var resName = this.name.nativeElement.value;
     axios.post("http://localhost:3000/users",{

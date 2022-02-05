@@ -17,33 +17,57 @@
             <mat-tab label="Apostar"> 
                 <div class="colorApostar">
                     <mat-form-field>
-                        <mat-label>Color a Apostar</mat-label>
-                        <select matNativeControl required>
-                            <option value="Verde">Verde</option>
+                        <mat-label>Color a Apuestar</mat-label>
+                        <select matNativeControl required #colorApuesta>
                             <option value="Rojo">Rojo</option>
                             <option value="Negro">Negro</option>
+                            <option value="Verde">Verde</option>
                         </select>
                     </mat-form-field>
                 </div>
                 <div class="porcentajeApostar">
                     <mat-form-field>
-                        <mat-label>Color a Apostar</mat-label>
-                        <select matNativeControl required>
-                            <option value="8">8%</option>
-                            <option value="15">15%</option>
-                            <option value="100">All-In</option>
+                        <mat-label>Porcentaje de Apuestar</mat-label>
+                        <select matNativeControl required #porcentajeApuesta>
+                            <option value="8" name="porcentaje">8%</option>
+                            <option value="15" name="porcentaje">15%</option>
+                            <option value="100" name="porcentaje">All-In</option>
                         </select>
                     </mat-form-field> 
                 </div>
                 <div>
-                    <button>Apostar</button>
+                    <button (click)="validarGanador()">Apostar</button>
                 </div>
             </mat-tab>
             <mat-tab label="Fondear Cuenta">
                 <h1>Fondear cuenta</h1>
                 <p #montoTotalFondeo></p>
+                <input type="number" #valorFondear/>
+                <button (click)="fondear()">Fondear</button>
             </mat-tab>
             <mat-tab label="Usuario">
+                <div>
+                    <h1>Username</h1>
+                    <p #usernameDB></p>
+                    <input type="text" #updateUsername/>
+                    <button (click)="updateNombreU()">Editar username</button>
+                </div>
+                <div>
+                    <h1>Password</h1>
+                    <p>Ingrese nueva contraseña</p>
+                    <input type="password" #updatePassword/>
+                    <button (click)="updateClave()">Editar contraseña</button>
+                </div>
+                <div>
+                    <h1>Nombre</h1>
+                    <p #nombreDB></p>
+                    <input type="text" #updateNombre/>
+                    <button (click)="updateName()">Editar nombre</button>
+                </div>
+                <div>
+                    <h1>Eliminar Cuenta</h1>
+                    <button (click)="borrarCuenta()">Borrar Cuenta</button>
+                </div>
             </mat-tab>
           </mat-tab-group>
     </div>
