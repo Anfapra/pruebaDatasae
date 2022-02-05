@@ -1,0 +1,36 @@
+<mat-tab-group>
+    <mat-tab label="Iniciar Sesión"> 
+        <div>
+            <div>
+                <label>Username</label>
+                <input type="text" #username>
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" #password>
+            </div>
+            <div>
+                <button (click)="login()">Iniciar Sesión</button>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Registro">
+        <div>
+            <div>
+                <label>Username</label>
+                <input type="text" #usernameRegistro>
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" #passwordRegistro>
+            </div>
+            <div>
+                <label>Nombre</label>
+                <input type="text" #name>
+            </div>
+            <div>
+                <button (click)="registro()">Registrarse</button>
+            </div>
+        </div>
+    </mat-tab>
+  </mat-tab-group>

@@ -1,0 +1,18 @@
+.ruleta1{
+    width:20%
+}
+.btn{
+    background-color: purple;
+}
+.btn:active{
+    background-color: blue;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.arrow{
+    display: flex;
+    justify-content: center;
+}

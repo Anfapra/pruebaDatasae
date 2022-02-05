@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="ruletaContainer col-6">
+        <div class="row">
+            <h1>Monto total:</h1>
+            <p #montoTotal></p>
+        </div>
+        <div class="row">
+            <div class="container row">
+                <i class="bi bi-caret-down-fill arrow"></i>
+                <img #asImg src="../assets/Ruleta.svg" class="ruleta1"/>
+            </div>
+        </div>
+        <div class="btn" (click)="random()">Buttom</div>
+    </div>
+    <div class="operacionContainer col-6">
+        <mat-tab-group>
+            <mat-tab label="Apostar"> 
+                <div class="colorApostar">
+                    <mat-form-field>
+                        <mat-label>Color a Apostar</mat-label>
+                        <select matNativeControl required>
+                            <option value="Verde">Verde</option>
+                            <option value="Rojo">Rojo</option>
+                            <option value="Negro">Negro</option>
+                        </select>
+                    </mat-form-field>
+                </div>
+                <div class="porcentajeApostar">
+                    <mat-form-field>
+                        <mat-label>Color a Apostar</mat-label>
+                        <select matNativeControl required>
+                            <option value="8">8%</option>
+                            <option value="15">15%</option>
+                            <option value="100">All-In</option>
+                        </select>
+                    </mat-form-field> 
+                </div>
+                <div>
+                    <button>Apostar</button>
+                </div>
+            </mat-tab>
+            <mat-tab label="Fondear Cuenta">
+                <h1>Fondear cuenta</h1>
+                <p #montoTotalFondeo></p>
+            </mat-tab>
+            <mat-tab label="Usuario">
+            </mat-tab>
+          </mat-tab-group>
+    </div>
+</div>
