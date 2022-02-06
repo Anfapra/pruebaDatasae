@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+.nav{
+    height: 5em;
+    background-color: #614BF2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    margin-top: 2%;
+    color: white;
+    font-family: 'Bungee', cursive;
+    font-size: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    color: white;
+}
+.tab{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+.inputContainer{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+.des{
+    margin: 1%;
+    color: #F28705;
+}
+
+.inputContainer input{
+    border-color: #614BF2;
+    border: 2px solid #614BF2;
+    border-radius: 30px;
+    height: 40px;
+}
+.inputContainer input:hover{
+    border-color: #8372F2;
+}
+.inputContainer input:focus{
+    border-color: #8372F2;
+}
+.btnSty{
+    margin: 1%;
+    background-color: #F28705;
+    border: none;
+    border-radius: 30px;
+    height: 40px;
+    color: white;
+}
+.btnSty:active{
+    background-color: #F2B705;
+}

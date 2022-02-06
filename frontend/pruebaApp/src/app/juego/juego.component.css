@@ -1,13 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+.nav{
+    height: 5em;
+    background-color: #614BF2;
+    display: flex;
+    align-items: center;
+}
+.titulo{
+    margin-top: 2%;
+    color: white;
+    font-family: 'Bungee', cursive;
+    font-size: 2.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnLogOut{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnLogOut:active{
+    background-color: #8372F2;
+    border-radius: 50px;
+}
+.btnLogOut:hover{
+    background-color: #8372F2;
+    border-radius: 50px;
+}
+.icon{
+    color: white;
+    font-size: 2em;
+}
+.displayMonto{
+    background-color: #F28705;
+    border-radius: 1vw;
+    width: 40%;
+    margin: 1%;
+    padding: 2%;
+}
+.montoTitle{
+    font-size: 2vw;
+    text-align: center;
+    font-family: 'Bungee', cursive;
+    color: #BF0404;
+}
+.monto{
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+}
+.monto1{
+    color: #BF0404;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    margin-left: 2%;
+}
 .ruleta1{
-    width:40%
+    width:60%
 }
-.btn{
-    background-color: purple;
-}
-.btn:active{
-    background-color: blue;
-}
+
 .container{
+    margin-top: 5%;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -16,6 +72,79 @@
     display: flex;
     justify-content: center;
 }
-.operacionContainer{
-    background-color: aqua;
+.apostartitulo{
+    font-family: 'Bungee', cursive;
+    color:#BF0404;
+    text-align: center;
+    font-size: 3vw;
+}
+.apostartitulo1{
+    font-family: 'Bungee', cursive;
+    color:#BF0404;
+    text-align: center;
+    font-size: 2.5vw;
+}
+.tap1{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+.btnSty{
+    margin: 1%;
+    background-color: #F28705;
+    width: 60%;
+    border: none;
+    border-radius: 30px;
+    height: 40px;
+    color: white;
+}
+.btnSty:active{
+    background-color: #F2B705;
+}
+.btnSty1{
+    margin: 1%;
+    background-color: #F28705;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    height: 40px;
+    color: white;
+}
+.btnSty1:active{
+    background-color: #F2B705;
+}
+.fila{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.fila1{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.contendorBtnAp{
+display: flex;
+justify-content: center;
+}
+.field{
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+.des{
+    margin: 1%;
+    color: #F28705;
+}
+.inputAc{
+    border-color: #614BF2;
+    border: 2px solid #614BF2;
+    border-radius: 30px;
+    height: 40px;
+}
+.des1{
+    color:#BF0404;
+}
+.algCenter{
+    text-align: center;
 }

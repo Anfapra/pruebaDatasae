@@ -6,6 +6,7 @@ const mysqlConnection = mysql.createConnection({
     database: "datasaePrueba",
 })
 
+//Conexión base de datos
 mysqlConnection.connect(function (err){
     if(err){
         console.log(err);

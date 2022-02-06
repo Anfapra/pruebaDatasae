@@ -1,8 +1,16 @@
+<div class="row nav">
+    <div class="col-6">
+        <h1 class="titulo">Ruleta: Anfapra</h1>
+    </div>
+    <div class="col-3 offset-3 btnLogOut" (click)="logOut()">
+        <i class="bi bi-lock-fill icon"></i>
+    </div>
+</div>
 <div class="row">
     <div class="ruletaContainer col-6">
-        <div class="row">
-            <h1>Monto total:</h1>
-            <p #montoTotal></p>
+        <div class="row displayMonto">
+            <h1 class="montoTitle">Monto total:</h1>
+            <p #montoTotal class="monto"></p>
         </div>
         <div class="row">
             <div class="container row">
@@ -10,65 +18,123 @@
                 <img #asImg src="../assets/Ruleta.svg" class="ruleta1"/>
             </div>
         </div>
-        <div class="btn" (click)="random()">Buttom</div>
     </div>
     <div class="operacionContainer col-6">
         <mat-tab-group>
-            <mat-tab label="Apostar"> 
-                <div class="colorApostar">
-                    <mat-form-field>
-                        <mat-label>Color a Apuestar</mat-label>
-                        <select matNativeControl required #colorApuesta>
-                            <option value="Rojo">Rojo</option>
-                            <option value="Negro">Negro</option>
-                            <option value="Verde">Verde</option>
-                        </select>
-                    </mat-form-field>
-                </div>
-                <div class="porcentajeApostar">
-                    <mat-form-field>
-                        <mat-label>Porcentaje de Apuestar</mat-label>
-                        <select matNativeControl required #porcentajeApuesta>
-                            <option value="8" name="porcentaje">8%</option>
-                            <option value="15" name="porcentaje">15%</option>
-                            <option value="100" name="porcentaje">All-In</option>
-                        </select>
-                    </mat-form-field> 
-                </div>
-                <div>
-                    <button (click)="validarGanador()">Apostar</button>
-                </div>
-            </mat-tab>
-            <mat-tab label="Fondear Cuenta">
-                <h1>Fondear cuenta</h1>
-                <p #montoTotalFondeo></p>
-                <input type="number" #valorFondear/>
-                <button (click)="fondear()">Fondear</button>
-            </mat-tab>
-            <mat-tab label="Usuario">
-                <div>
-                    <h1>Username</h1>
-                    <p #usernameDB></p>
-                    <input type="text" #updateUsername/>
-                    <button (click)="updateNombreU()">Editar username</button>
-                </div>
-                <div>
-                    <h1>Password</h1>
-                    <p>Ingrese nueva contraseña</p>
-                    <input type="password" #updatePassword/>
-                    <button (click)="updateClave()">Editar contraseña</button>
-                </div>
-                <div>
-                    <h1>Nombre</h1>
-                    <p #nombreDB></p>
-                    <input type="text" #updateNombre/>
-                    <button (click)="updateName()">Editar nombre</button>
-                </div>
-                <div>
-                    <h1>Eliminar Cuenta</h1>
-                    <button (click)="borrarCuenta()">Borrar Cuenta</button>
-                </div>
-            </mat-tab>
+            <div class="row">
+                <mat-tab label="Apostar">
+                    <div class="tap1 row">
+                        <h1 class="apostartitulo">¡Has tu apuesta!</h1>
+                        <div class="colorApostar row fila">
+                            <mat-form-field>
+                                <mat-label>Color a Apuestar</mat-label>
+                                <select matNativeControl required #colorApuesta>
+                                    <option value="Rojo">Rojo</option>
+                                    <option value="Negro">Negro</option>
+                                    <option value="Verde">Verde</option>
+                                </select>
+                            </mat-form-field>
+                        </div>
+                        <div class="porcentajeApostar row fila">
+                            <mat-form-field>
+                                <mat-label>Porcentaje de Apuestar</mat-label>
+                                <select matNativeControl required #porcentajeApuesta>
+                                    <option value="8" name="porcentaje">8%</option>
+                                    <option value="15" name="porcentaje">15%</option>
+                                    <option value="100" name="porcentaje">All-In</option>
+                                </select>
+                            </mat-form-field> 
+                        </div>
+                        <div class="row contendorBtnAp">
+                            <button (click)="validarGanador()" class="btnSty">Apostar</button>
+                        </div>
+                    </div>
+                </mat-tab>
+            </div>
+            <div>
+                <mat-tab label="Fondear Cuenta">
+                    <div class="tap1 row">
+                        <div class="row fila">
+                            <h1 class="apostartitulo1">Fondear cuenta</h1>
+                            <div class="row monto1">
+                                <p class="monto1">Monto:</p><p #montoTotalFondeo class="monto1"></p>
+                            </div>
+                        </div>
+                        <div class="fila1 row">
+                            <label class="des">Ingresa la cantidad:</label>
+                            <input type="number" #valorFondear class="inputAc"/>
+                        </div>
+                        <div class="row contendorBtnAp">
+                            <button (click)="fondear()"  class="btnSty">Fondear</button>
+                        </div>
+                    </div>
+                </mat-tab>
+            </div>
+            <div>
+                <mat-tab label="Usuario">
+                    <div class="tap1 row">
+                        <div class="row fila">
+                            <h1 class="apostartitulo">Edita tu perfil</h1>
+                        </div>
+                        <div class="row fila">
+                            <div class="row field">
+                                <div class="col-2">
+                                    <p class="des">Username:</p>
+                                </div>
+                                <div class="col-4">
+                                    <p class="des" #usernameDB></p>
+                                </div>
+                            </div>
+                            <div class="algBtnInp">
+                                <div class="row filaa">
+                                    <input type="text" #updateUsername class="inputAc"/>
+                                </div>
+                                <div>
+                                    <button (click)="updateNombreU()" class="btnSty1">Editar username</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row fila">
+                            <div class="row field">
+                                <div class="col-2">
+                                    <p class="des">Password:</p>
+                                </div>
+                                <div class="col-8">
+                                    <p class="des">Ingrese nueva contraseña</p> 
+                                </div>
+                            </div>
+                            <div class="row filaa">
+                                <input type="password" #updatePassword class="inputAc"/>    
+                            </div>
+                            <div>
+                                <button (click)="updateClave()" class="btnSty1">Editar contraseña</button>
+                            </div>
+                        </div>
+                        <div class="row fila">
+                            <div class="row field">
+                                <div class="col-2">
+                                    <p class="des">Nombre:</p>
+                                </div>
+                                <div class="col-8">
+                                    <p #nombreDB class="des"></p> 
+                                </div>
+                            </div>
+                            <div class="row filaa">
+                                <input type="text" #updateNombre class="inputAc"/>    
+                            </div>
+                            <div>
+                                <button (click)="updateName()" class="btnSty1">Editar nombre</button>
+                            </div>
+                        </div>
+                        <div class="row fila">
+                            <h1 class="des1 algCenter">Eliminar Cuenta</h1>
+                            <div>
+                                <button (click)="borrarCuenta()" class="btnSty1">Borrar Cuenta</button>
+                            </div>
+                        </div>
+                    </div>
+                </mat-tab>
+            </div>
           </mat-tab-group>
     </div>
 </div>

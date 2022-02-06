@@ -230,4 +230,8 @@ export class JuegoComponent implements OnInit {
       }
     }
   }
+  logOut(){
+    this.router.navigate(['login'])
+    localStorage.clear()
+  }
 }
