@@ -4,7 +4,8 @@
   "description": "Prueba de Programacion ",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
   "author": "Andres Felipe Arias Prada",
   "license": "ISC",
