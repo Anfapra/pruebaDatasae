@@ -1,4 +1,7 @@
 # pruebaDatasae
+video:https://1drv.ms/u/s!AqHvd0o9MVjfrxmpcLi0X1rK6MaP?e=ceuYWo
+
+
 Paso 1: Actualizar las versiones del sistema
 "sudo apt update && sudo apt upgrate"
 
