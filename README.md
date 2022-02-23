@@ -34,5 +34,8 @@ En caso de que no tenga Git usar el comando ```apt-get install git```
 ### Paso 1: Volver a la raiz del proyecto
 ```cd ../frontend```
 
-### Paso 2: instalar node_module
+### Paso 2: Instalar node_module
 ```npm install```
+
+### Paso 3: Correr el servidor
+```ng serve```
